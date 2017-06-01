@@ -732,8 +732,8 @@ aside#sidebar {
     background: transparent url(../images/sidebar-bg.jpg) 0 0 no-repeat;
 }
 
-aside#sidebar p.repo-owner,
-aside#sidebar p.repo-owner a {
+aside#sidebar div.repo-owner,
+aside#sidebar div.repo-owner a {
     font-weight: bold;
 }
 
