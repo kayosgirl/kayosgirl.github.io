@@ -51,8 +51,22 @@ function readJsonFile(file, callback) {
 
 readJsonFile("../assets/json/rewards.json", function(text){
     var data = JSON.parse(text);
-    document.getElementById("postjson").innerHTML = JSON.stringify(data);
+    document.getElementById("postjson").innerHTML = Iterate(data);;
     console.log(data);
 });
+
+function Iterate(data)
+{
+    jQuery.each(data, function (index, value) {
+        if (typeof value == 'object') {
+            alert("Object " + index);
+            Iterate(value);
+        }
+        else {
+             alert(index + "   :   " + value);
+        }
+    });
+
+};
 </script>
 </html>
