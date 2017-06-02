@@ -51,17 +51,12 @@ function readJsonFile(file, callback) {
 
 //usage:
 readJsonFile("../assets/json/rewards.json", function(text){
-    var arr = JSON.parse(text);
-
-    for (var i = 0; i < arr.length; i++){
-      document.write("<br><br>array index: " + i);
-      var obj = arr[i];
-      for (var key in obj){
-        var value = obj[key];
-        document.write("<br> - " + key + ": " + value);
-      }
+    var data = JSON.parse(text);
+    for (i in data)
+    {
+      document.getElementById("postjson").innerHTML += data[i].name + "<br />";
     }
-    console.log(arr);
+    console.log(data);
 });
 </script>
 </html>
