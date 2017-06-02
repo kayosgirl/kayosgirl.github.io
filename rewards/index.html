@@ -51,9 +51,9 @@ function readJsonFile(file, callback) {
 
 readJsonFile("../assets/json/rewards.json", function(text){
     var data = JSON.parse(text);
-    for (i in data)
+    for (i in data.commands)
     {
-      document.getElementById("postjson").innerHTML += data[i].name + "<br />";
+      document.getElementById("postjson").innerHTML += data[i].reward + "<br />";
     }
     console.log(data);
 });
