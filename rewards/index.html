@@ -49,7 +49,6 @@ function readJsonFile(file, callback) {
     rawFile.send(null);
 }
 
-//usage:
 readJsonFile("../assets/json/rewards.json", function(text){
     var data = JSON.parse(text);
     for (i in data)
